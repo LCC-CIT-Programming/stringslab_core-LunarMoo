@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
 
 namespace PigLatin
@@ -42,10 +42,10 @@ namespace PigLatin
 					vIndex = i;
 			}
 			Console.WriteLine("The index of the first vowel is: " + vIndex);
-
-
-
-
+			// create an array of strings from a string.  Default delimiter is white space.
+			string[] words = input.Split();
+			foreach (string word in words)
+			Console.WriteLine(word);
 
 			string pig1 = PigLatin1(input);
 			Console.WriteLine("The word {0} in pig latin is: {1}", input, pig1);
@@ -55,11 +55,7 @@ namespace PigLatin
 
 
 			*/
-			// create an array of strings from a string.  Default delimiter is white space.
-			string[] words = input.Split();
-			foreach (string word in words)
-				Console.WriteLine(word);
-
+			
 			string pig = Piglatin3(input);
 			Console.WriteLine("The word {0} in pig latin is: {1}", input, pig);
 			
